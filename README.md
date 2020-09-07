@@ -17,7 +17,7 @@ In matlab 2017a, you have to comment out the function hString2Char in mpqpsolver
 clone this repository
 
 ```
-git clone bla
+git clone git@github.com:Olofforsberg/RHC-and-MPC-on-a-pendulum-crane-example..git
 ```
 Add this folder to path in matlab and run the files:
 testMyRHC.m for running a RHC controller of the crane.
