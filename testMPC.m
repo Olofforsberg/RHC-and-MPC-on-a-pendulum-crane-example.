@@ -61,10 +61,10 @@ uh=[1; 1];
 
 %% Compute QP constraint matrices
 [Gamma,Phi] = Prediction(A,B,N); % get prediction matrices:
-[F,J,L]=ConstraintMatrices(DD,EE,Gamma,Phi,N);
+[F,J,L] = ConstraintMatrices(DD,EE,Gamma,Phi,N);
 
 %% Compute QP cost matrices
-[H,G]=CostMatrices(Gamma,Phi,Q,R,P,N);
+[H,G] = CostMatrices(Gamma,Phi,Q,R,P,N);
 
 %% Compute matrices and vectors for soft constraints
 % Define weights for constraint violations
@@ -81,7 +81,7 @@ L = Ls;
 
 %% Prepare cost and constraint matrices for mpcqpsolver
 % Calculating the inverse of the lower triangular H. see doc mpcqpsolver.
-% We do it here rather than inside myMPController for speed and generality
+% It is done here rather than inside myMPController for speed and generality
 [H,p] = chol(H,'lower');
 H=H\eye(size(H));
 

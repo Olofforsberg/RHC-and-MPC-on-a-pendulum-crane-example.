@@ -3,7 +3,6 @@ function [Hs,gs,Fs,bs,Js,Ls] = mySoftPadding(H,F,bb,J,L,S,rho,m)
 % rho = scalar weight for 1-norm of constraint violations
 % m = number of inputs
 
-% your code here
 [N1,n]=size(J);
 c=size(S,1);
 N=N1/(n+c);
